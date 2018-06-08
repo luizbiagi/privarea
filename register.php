@@ -1,6 +1,8 @@
 <?php 
 define('__CONFIG__', true);
-require_once "inc/config.php";?>
+require_once "inc/config.php";
+Page::ForceDashboard();
+?>
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -9,7 +11,7 @@ require_once "inc/config.php";?>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="robots" content="follow">
     <title>Ninjas também dormem!</title>
-    <base href="/"/>
+    <!--base href="/"/-->
     <link rel="stylesheet" href="../uikit.min.css"/>
 </head>
 <body>
@@ -30,6 +32,8 @@ require_once "inc/config.php";?>
                         <input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="Your Password">
                     </div>
                 </div>
+
+                <div class="uk-margin uk-alert uk-alert-danger js-error" style="display:none;"></div>
 
                 <div class="uk-margin">
                     <button class="uk-button uk-button-default" type="submit">Register</button>
